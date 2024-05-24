@@ -1,0 +1,23 @@
+
+.menu{
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(237, 228, 97);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a{
+  display: flex;
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  margin-left: 2em;
+  font-weight: 500;
+}
+
+
+

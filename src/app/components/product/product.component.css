@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Titillium+Web:wght@200;300;400;600;700&display=swap");
+
+.contenedor {
+  max-width: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* oculto lo que queda fuera del .contenedor */
+  contain: paint;
+
+}
+
+.contenedor h1 {
+  width: 100%;
+}
+
+/* SECCION CONTENEDOR DE ITEMS */
+.contenedor .contenedor-items {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(30px, 0.5fr));
+  grid-gap: 30px;
+  grid-row-gap: 30px;
+  /* width: 60%; */
+  width: 100%;
+  height: auto;
+  transition: 0.3s;
+}
+
+.contenedor .contenedor-items .item {
+  width: 14vw;
+  height: 20wh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  border: 1px solid #666;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+.contenedor .contenedor-items .item span {
+  padding: .8rem;
+
+}
+
+.contenedor .contenedor-items .item .img-item {
+  width: 100%;
+}
+
+.contenedor .contenedor-items .item .titulo-item {
+  display: block;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.contenedor .contenedor-items .item .precio-item {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.contenedor .contenedor-items .item .boton-item {
+  display: block;
+  margin: 10px auto;
+  border: none;
+  background-color: black;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Table */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80vw;
+  height: 90vh;
+}
+
+.titulo {
+  margin: 1.1em 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+}
+
+h1 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.menu-acciones {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.container-table {
+  width: 90%;
+  height: 80%;
+  margin: 0 2em;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: .3em solid rgb(133, 29, 29);
+  font-weight: 400;
+  text-align: center;
+}
+
+th {
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+  background-color: rgb(237, 228, 97);
+}
+
+
+th, td {
+  border: .3em solid black;
+  font-weight: 500;
+  height: 3.5em;
+}
+
+td .icono:hover {
+  cursor: pointer;
+}
+
+.icono{
+  width: auto;
+  height: 100%;
+  border: none;
+  font-size: 2em;
+  margin-left: 5%;
+}
+
+
+.registro-span {
+  margin-top: 1em;
+  text-align: center;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
+.botones{
+  display: flex;
+  justify-content:flex-end;
+  margin-right: 7vw;
+}
+
+.btn{
+  display: inline-block;
+  background-color: rgb(237, 228, 97);
+  padding: 10px 20px;
+  margin: 15vh 2px 30px 40px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  border-color: none;
+}
+
+

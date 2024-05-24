@@ -1,0 +1,40 @@
+
+<div class="container">
+    <div class="carrito" id="carrito">
+        <div class="header-carrito">
+            <h2>Tu Carrito</h2>
+        </div>
+
+        <div class="no-item" *ngIf="!flag">
+            <h2>No hay nada.</h2>
+            <p>Agrega algo al carrito.</p>
+        </div>
+    
+        <div class="carrito-items" *ngIf="flag">
+            <div class="carrito-item" *ngFor="let product of carrito">
+                <img src="img/boxengasse.png" width="80px" alt="">
+                <div class="carrito-item-detalles">
+                    <span class="carrito-item-titulo">{{product.name}}</span>
+                    <div class="selector-cantidad">
+                        <i class="fa-solid fa-minus restar-cantidad"  (click)="reducirCantidad(product)"></i>
+                        <input type="text" [value]="product?.cantidad" class="carrito-item-cantidad" disabled>
+                        <i class="fa-solid fa-plus sumar-cantidad" (click)="addCantidad(product)"></i>
+                    </div>
+                    <span class="carrito-item-precio">{{product.price}}</span>
+                </div>
+                <span class="btn-eliminar">
+                    <i class="fa-solid fa-trash"></i>
+                </span>
+            </div>
+        </div>
+        <div class="carrito-total">
+            <div class="fila">
+                <strong>Tu Total</strong>
+                <span class="carrito-precio-total">
+                   {{ total }}
+                </span>
+            </div>
+            <button class="btn-pagar"><a href="checkout">Pagar <i class="fa-solid fa-bag-shopping"></i></a> </button>
+        </div>
+    </div>
+</div>

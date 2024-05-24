@@ -1,0 +1,61 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<section class="contenedor">
+  <!-- Contenedor de elementos -->
+  <div>
+    <h1>Lista de productos</h1>
+  </div>
+  <div class="contenedor-items" *ngIf="!isAdmin && !flag">
+    <div class="item" *ngFor="let product of products">
+
+      <img src="https://i.pinimg.com/564x/36/fc/12/36fc12635f8ebdcb9cc49083ff28993c.jpg" alt="" class="img-item" />
+      <span class="titulo-item">{{ product.name }}</span>
+      <span class="precio-item">$ {{ product.price }}</span>
+      <span class="category-item"></span>
+      <div class="btns">
+        <button class="boton-item">Comprar</button>
+        <button class="boton-item" (click)="addToCarrito(product)"><span class="icono"><i class="fas fa-shopping-cart">Carrito</i></span></button>
+        <button class="boton-item" (click)="addToWishlist(product)"><span class="icono"><i class="fas fa-shopping-cart" >Favoritos</i></span></button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container-table" *ngIf="isAdmin && flag">
+    <div class="botones">
+      <button type="button" class="btn" (click)="openAddProduct()">
+        <i class="fas fa-plus"></i>Agregar producto
+      </button>
+      <button type="button" class="btn" (click)="openCategory()">
+        <i class="fas fa-plus"></i>Agregar Categoria
+      </button>
+    </div>
+    <table class="table">
+
+      <tr>
+        <th> ID </th>
+        <th> Nombre </th>
+        <th> Precio </th>
+        <th> Categoria </th>
+        <th> Acciones </th>
+      </tr>
+
+      <tr *ngFor="let product of products">
+        <td>{{ product.id }}</td>
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.category }}</td>
+        <td> <button class="icono" (click)="openEditProduct()"><i class="fas fa-edit"></i></button>
+          <button class="icono" (click)="deleteProduct(product.id)"><i class="fas fa-trash-alt"></i></button></td>
+
+      </tr>
+
+    </table>
+
+    <div *ngIf="show" class="registro-span">
+      <span>No hay registros</span>
+    </div>
+
+  </div>
+</section>

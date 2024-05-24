@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  height: 150vh;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing {
+  height: 80vh;
+  width: 100%;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-image: url(../home/img/photo-1524532787116-e70228437bbe.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.texto {
+  color: black;
+  -webkit-text-stroke: 1px rgb(255, 243, 69);
+  font-size: 4em;
+  margin: .9em 2.5em;
+  padding-left: 2rem;
+  line-height: 1.2;
+  height: 100%;
+  width: 25%;
+}

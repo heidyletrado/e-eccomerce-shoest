@@ -1,0 +1,23 @@
+<header id="header">
+
+  <div class="container">
+    <h1><a href="inicio">easy</a></h1>
+  </div>
+
+  <div class="container search">
+    <input type="text" class="input" placeholder="Ej. Adidas">
+    <button text="submit" class="button"><i class="fas fa-search search-icon"></i></button>
+  </div>
+
+  <div class="container c-c">
+    
+    <div class="login-section" (mouseenter)="showMenu = true" (mouseleave)="showMenu = false">
+      <a href="login" *ngIf="!flag" class="text"><span class="icono"><i class="fas fa-user-circle"></i></span> Login</a>
+    </div>
+    <a href="usuario" class="text" *ngIf="flag" style="color: black;"><span class="icono"><i class="fas fa-user-circle"></i></span><p>{{ name(user.name + " " + user.lastName)}}</p></a>
+    <span class="icono"><i class="fas fa-heart"></i></span>
+    <a href="favoritos" class="text">Favoritos</a>
+    <span class="icono"><i class="fas fa-shopping-cart"></i></span>
+    <a href="carrito" class="text">Carrito</a>
+  </div>
+</header>
